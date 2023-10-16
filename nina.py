@@ -5,7 +5,7 @@ code =int(input('room code: '))
 req = requests.get('https://api.quizit.online/quizizz/answers', params={'pin':code})
 req1 = json.loads(req.text)
 print(req)
-if req.status_code =200:
+if req.status_code ==200:
 	print(req1['message'])
 	data = req1["data"]
 	answers = data["answers"]
