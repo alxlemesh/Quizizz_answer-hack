@@ -23,4 +23,4 @@ if req.status_code ==200:
 		print("type: "+str(a['type']))
 	print("number of questions: "+str(question_count))
 else:
-	print('Unexpected responce.Room code is not correct or our servers are down')
+	print('Unexpected responce.Room code is not correct or our servers are down. You can always check state of servers on https://status.quizit.online/')
