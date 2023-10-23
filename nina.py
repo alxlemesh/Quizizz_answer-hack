@@ -1,7 +1,7 @@
 import json
 import requests
 from bs4 import BeautifulSoup
-code =int(input('room code: '))
+code =input('room code: ')
 req = requests.get('https://api.quizit.online/quizizz/answers', params={'pin':code})
 req1 = json.loads(req.text)
 print(req)
@@ -24,3 +24,4 @@ if req.status_code ==200:
 	print("number of questions: "+str(question_count))
 else:
 	print('Unexpected responce.Room code is not correct or our servers are down. You can always check state of servers on https://status.quizit.online/')
+	print(req1['message'])
